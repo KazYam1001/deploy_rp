@@ -1,7 +1,7 @@
 lock '3.11.0'
 
 set :application, 'deploy_rp'
-set :repo_url,  'git@github.com:KazYam1001/deploy_rp.git'
+set :repo_url,  'git@github.com:<Githubのユーザー名>/<レポジトリ名>.git'
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
@@ -9,7 +9,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1' #カリキュラム通りに進めた場合、2.5.1か2.3.1です
 
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/.ssh/yampro.pem']
+                          keys: ['yampro.pem']
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
