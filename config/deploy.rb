@@ -1,7 +1,7 @@
 lock '3.11.0'
 
-set :application, 'chat-space'
-set :repo_url,  'git@github.com:KazYam1001/chat-space.git'
+set :application, 'deploy_rp'
+set :repo_url,  'git@github.com:KazYam1001/deploy_rp.git'
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
@@ -40,4 +40,4 @@ namespace :deploy do
 end
 
 # ロープレ用
-set :brance, 'S3_2'
+set :branch, 'S3_2'
