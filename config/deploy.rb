@@ -38,3 +38,6 @@ namespace :deploy do
   before :starting, 'deploy:upload'
   after :finishing, 'deploy:cleanup'
 end
+
+# ロープレ用
+set :brance, 'S3_2'
